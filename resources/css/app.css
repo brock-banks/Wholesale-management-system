@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        font-feature-settings: 'cv11', 'ss01';
+    }
+    body {
+        background-color: #F8FAFC;
+        color: #1E293B;
+        font-size: 14px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: #0F172A;
+        font-weight: 500;
+    }
+}
+
+@layer components {
+    .money {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-variant-numeric: tabular-nums;
+    }
+    .ref {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        color: #3F5A78;
+    }
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 11px;
+        font-weight: 500;
+        padding: 3px 9px;
+        border-radius: 999px;
+        line-height: 1.6;
+    }
+    .badge-paid, .badge-confirmed, .badge-in-stock, .badge-check-cleared {
+        background-color: #ECFDF5;
+        color: #065F46;
+    }
+    .badge-partial, .badge-modified, .badge-on-hold, .badge-low-stock {
+        background-color: #FFFBEB;
+        color: #92400E;
+    }
+    .badge-unpaid, .badge-overdue, .badge-out-of-stock, .badge-check-bounced {
+        background-color: #FEF2F2;
+        color: #991B1B;
+    }
+    .badge-pending, .badge-reviewing, .badge-check-pending {
+        background-color: #EFF3F8;
+        color: #2C4360;
+    }
+    .badge-draft, .badge-cancelled, .badge-invoiced {
+        background-color: #F1F5F9;
+        color: #475569;
+    }
+    .input {
+        @apply w-full h-[38px] px-3 text-sm text-ink-900 bg-white border border-ink-300 rounded focus:outline-none focus:border-primary-700 focus:ring-1 focus:ring-primary-700;
+    }
+    .input-currency {
+        @apply input money text-right;
+    }
+    .input-mono {
+        @apply input money;
+    }
+}

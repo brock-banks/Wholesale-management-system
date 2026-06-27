@@ -1,0 +1,1 @@
+import{o as e}from"./app-UDHmmHtY.js";function t(){let{settings:t}=e().props,n=t?.currency_code??`PKR`;return{currency:n,format:(e,t)=>{let r=typeof e==`string`?parseFloat(e):e??0,i=(Number.isFinite(r)?r:0).toLocaleString(`en-US`,{minimumFractionDigits:2,maximumFractionDigits:2});return t?.withCurrency===!1?i:`${n} ${i}`}}}export{t};
